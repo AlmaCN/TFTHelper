@@ -1,0 +1,17 @@
+package com.cnade.betfthelper.exception;
+
+import org.springframework.http.HttpStatus;
+
+public class PlayerNameAlreadyTaken extends CustomException{
+
+    @Override
+    public HttpStatus cod() {
+        return HttpStatus.CONFLICT;
+    }
+
+    @Override
+    public String desc() {
+        return "Name already taken";
+    }
+
+}
